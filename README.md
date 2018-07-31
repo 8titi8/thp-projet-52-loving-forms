@@ -1,24 +1,38 @@
-# README
+# The Hacking Project - Semaine 5 - Mardi
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+## Projet : I love forms
 
-Things you may want to cover:
+#### Edité par :
+  Mathilde Ray  🤗
 
-* Ruby version
+  Contact : 06 25 98 18 85
 
-* System dependencies
+  Sur Slack : @Mathilde Ray
 
-* Configuration
 
-* Database creation
 
-* Database initialization
+### Lien Heroku
 
-* How to run the test suite
+Pour aller sur le site en *production*, merci de suivre ce lien : [Movie Role Play](https://role-play-movie-fan.herokuapp.com/)
 
-* Services (job queues, cache servers, search engines, etc.)
+Pour un meilleur rendu, préférez google chrome comme navigateur !  😉
 
-* Deployment instructions
 
-* ...
+### Marche à suivre
+
+* Pour tout avoir sur ton ordi et faire des modifs en local, écrit dans ta console :
+```
+git clone https://github.com/8titi8/thp-projet-52-loving-forms.git
+cd thp-projet-52-loving-forms
+bundle install
+rails db:migrate
+rails server
+```
+
+* Dossiers et fichiers utiles :
+```
+/app/views
+/app/controllers
+/config/routes.rb
+/app/models
+```
