@@ -1,0 +1,28 @@
+<h1>💀</h1>
+<h3>🎙 Ready to start ? 📽</h3> <br>
+<h5>So fill up the form with the specifications of the character you wanna be !</h5>
+<br>
+
+<%= form_for @user, url: {action: "create_form_for"} do |f| %>
+  <%= field_set_tag 'Choose your favorite movie character' do %>
+    Name of your movie character : <br>
+    <%= f.text_field :username, class: "col-4", placeholder: "Your great name" %>
+    <p>
+    <% if @user.invalid? %>
+      <div class="alert-primary">
+        <% @user.errors[:username].each do |message| %>
+        <%= message %>
+        <% end %>
+      </div>
+    <% end %>
+    </p>
+    <br>
+
+    Your email address : <br>
+    <%= f.email_field(:email, option = {class: "col-5", placeholder: "Your email"})%> <br> <br>
+    The biography of your character : <br>
+    <%= f.text_area :bio, size: "40x5", placeholder: "Your incredible story.." %> <br> <br>
+    <%= f.submit "Let's play !"  %>
+  <% end %>
+<% end %>
+

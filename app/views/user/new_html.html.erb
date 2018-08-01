@@ -1,0 +1,28 @@
+<h1>👻 </h1>
+<h3>🎙 Ready to start ? 📽</h3> <br>
+<h5>So fill up the form with the specifications of the character you wanna be !</h5>
+<br>
+
+<form action="<%= new_html_path %>" method="post" >
+  <input type="hidden" name="authenticity_token" value="<%= form_authenticity_token %>">
+  <fieldset>
+    <legend> Choose your favorite movie character </legend><br>
+    Name of your movie character : <br>
+    <input type="text" name="username"><br>
+    <p>
+    <% if @user.invalid? %>
+      <div class="alert-primary">
+        <% @user.errors[:username].each do |message| %>
+        <%= message %>
+        <% end %>
+      </div>
+    <% end %>
+    </p>
+    <br>
+    Your email address : <br>
+    <input type="text" name="email"><br><br>
+    The biography of your character : <br>
+    <textarea name="bio"cols="30" rows="10"></textarea><br><br>
+    <input type="submit" name="submit" value="Let's play !">
+  </fieldset>
+</form>
